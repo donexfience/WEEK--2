@@ -394,7 +394,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 mb-4">
                     <div class="card rounded-0 border-0 p-0">
-                        <img decoding="async" src="./AdobeStock_61342759_Preview.jpeg" style="width: 360px; height: 220px;">
+                        <img decoding="async" src="./AdobeStock_258061883_Preview.jpeg" style="width: 360px; height: 220px;">
                         <div class="ed_details">
                             <div class="ed_text text-center">
                                 <h5 class="text-white mb-0">SSLC</h5>
@@ -420,7 +420,6 @@
         </div>
     </section>
     <!-- education Section exit -->
-
     <!-- Footer section -->
     <section id="contact" class="footer_wrapper mt-1">
         <div class="container">
@@ -434,30 +433,29 @@
                             <div class="col col-sm-6 col-lg-4">
                                 <div class="input-group">
                                 <label for="fname">First Name: </label>
-                                <input type="text" id="contact-name" name="name" placeholder="Your name.." onkeyup="validateName()">
+                                <input type="text" autocomplete="off" id="contact-name" name="name" placeholder="Your name.." onkeyup="validateName()">
                                 <span id="name-error"></span>
                                 </div>
                                 <div class="input-group">
                                 <label for="lname">Email :</label>
-                                <input type="text" id="contact-email" name="email" placeholder="Your email adress.."onkeyup="validateEmail()">
+                                <input type="text" id="contact-email" autocomplete="off" name="email" placeholder="Your email adress.."onkeyup="validateEmail()">
                                 <span id="Email-error"></span>
                                 </div> 
                                 <div class="input-group">
                                     <label for="contact-phone">Phone No :</label>
-                                    <input type="text" id="contact-phone" name="phone" placeholder="Your phone number.." onkeyup="validatePhone()">
+                                    <input type="text" id="contact-phone" autocomplete="off" name="phone" placeholder="Your phone number.." onkeyup="validatePhone()">
                                     <span id="number-error"></span>
                                 </div>
                                 <div class="input-group">
-                                    <textarea id="contact-message" name="message" placeholder="Write something.." style="height:170px" onkeyup="validateMessage()"></textarea>
+                                    <textarea id="contact-message" autocomplete="off" name="message" placeholder="Write something.." style="height:170px" onkeyup="validateMessage()"></textarea>
                                     <span id="meassage-error"></span>
                                 </div>
                                 <div class="input-group">
                                     <label for="subject">Adress: </label>
-                                    <textarea id="adress" name="contact-adress" placeholder="Write your adress.." style="height:100px"></textarea>
+                                    <textarea id="adress" autocomplete="off" name="contact-adress" placeholder="Write your adress.." style="height:100px"></textarea>
                                     <span id="adress-error"></span>
                                 </div>
-
-                                <input type="submit" id="submit" value="Submit">
+                                <input type="submit"  id="submit" value="Submit" onsubmit="validateForm();">
                             </div>
                             </div>
                         </form>
@@ -499,21 +497,6 @@
     </script>
     <!-- Custom Js Link -->
     <script src="js/main.js"></script>
-    <script>
-        function sendEmail(){
-            Email.send({
-    Host : "smtp.gmail.com",
-    Username : "donexbrocamp@gmail.com",
-    Password : "donexbrocamp2624",
-    To : 'donexbrocamp@gmail.com',
-    From :document.getElementById("email").value,
-    Subject : "new coustomer",
-    Body : "Name: "+document.getElementById("name").value+"<br> Email: "+document.getElementById("email").value+"<br> Number: "+document.getElementById("number").value
-}).then(
-  message => alert(message)
-);
-        }
-    </script>
 </body>
 
 </html>
