@@ -1,0 +1,442 @@
+/* General CSS */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Montserrat:wght@400;500;700;800;900&display=swap');
+
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+:root {
+
+    /* Text Colors */
+    --primary-color: #008AFC;
+    --secondary-color: #014EBC;
+    --light-pink-color: #FFFCF8;
+    --light-color: #CCCCCC;
+    --black-color: #000;
+    --white-color: #fff;
+    --box-shadow: 0.1rem -0.07rem 1.5rem 0.3rem rgb(0 0 0 / 26%);
+
+    /* font-family */
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+}
+
+body,
+html {
+    font-size: 10px;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+h1 {
+    color: var(--black-color);
+    font-size: 5.5rem;
+    font-weight: 800;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: var(--white-color);
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+h2 span {
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.3;
+    font-family: var(--secondary-font);
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1;
+    font-family: var(--secondary-font);
+    color: var(--black-color);
+    margin-bottom: 2rem;
+}
+
+h5 {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: var(--white-color);
+    font-family: var(--secondary-font);
+    margin-bottom: 0.9375rem;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+    color: var(--white-color);
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+.btn:focus {
+    text-decoration: none;
+    box-shadow: none;
+    outline: 0;
+}
+
+.bg-black {
+    background-color: var(--white-color);
+}
+
+.main-btn {
+    color: var(--white-color);
+    background-color:blueviolet;
+    border-radius: 5rem;
+    text-transform: capitalize;
+    padding: 0.9rem 3rem;
+    font-family: var(--secondary-font);
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+    transition: all .3s linear;
+    box-shadow: 1 1px 4px rgba(0, 0, 0, .3);
+}
+
+.main-btn:hover {
+    background:transparent ;
+    color: blue;
+    border:2px solid blueviolet ;
+}
+
+.view-link {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: var(--white-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.view-link:hover {
+    color: var(--white-color);
+    font-size: 1.6rem;
+}
+
+
+.wrapper {
+    padding: 7rem 0;
+    background-color: whitesmoke;
+}
+
+.sec-title h1 {
+    position: relative;
+}
+
+.sec-title h1::after {
+    position: absolute;
+    content: '';
+    background-color:blueviolet;
+    width: 50%;
+    height: 50%;
+    right: -4px;
+    bottom: 0%;
+    opacity: 0.5;
+}
+
+
+
+/*  Banner Section */
+.banner-wrapper {
+    margin-top: 8rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+    padding-bottom: 5rem;
+
+}
+/* About CSS */
+.main-wrapper {
+    margin-top: 0vh;
+    background-color: var(--white-color);
+    width: 100%;
+}
+
+.main-wrapper .black-card {
+    position: absolute;
+    top: 25%;
+    left: -400px;
+    width: calc(100% - 20%);
+    box-shadow: var(--box-shadow);
+    border-radius: 2.5rem;
+    background-color: var(--white-color);
+    padding: 2.5rem;
+    text-align: left;
+    z-index: 1;
+}
+
+.main-wrapper .black-card.right {
+    right: -400px;
+    left: unset;
+}
+/*education` Css  */
+
+.ed-wrapper {
+    background-color: var(--white-color);
+}
+
+.ed-wrapper h1 {
+    color: var(--black-color);
+}
+.ed-wrapper h2{
+    color: black;
+}
+
+.ed-wrapper .process-content {
+    padding: 2rem 6rem;
+    position: relative;
+}
+
+.ed-wrapper .process-content::after {
+    position: absolute;
+    content: '';
+    width: 40%;
+    margin: auto;
+    bottom: 0;
+    border-bottom: 2px solid var(--primary-color);
+}
+.sec-title h5{
+    color: #000;
+    font-weight: bolder;
+
+}
+
+.ed-wrapper.process-content span {
+    color: var(--primary-color);
+    font-size: 12rem;
+    font-weight: 800;
+    margin-right: 4rem;
+}
+.ed-p{
+    font-weight:bold ;
+    color: blueviolet;
+}
+/* se CSS */
+.se-wrapper h2 {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+.se-wrapper .card {
+    border: none;
+    background-color: var(--white-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 1rem;
+    margin: 2rem;
+    padding: 4rem 2rem;
+}
+
+.se .rating i {
+    color: rgb(255, 191, 0);
+    font-size: 1.4rem;
+}
+
+.se-wrapper .card p {
+    color: blueviolet
+}
+
+.se-wrapper .card h5 {
+    color: var(--black-color);
+    font-weight: 900;
+}
+
+.se-wrapper .carousel-indicators {
+    margin-bottom: -3rem;
+}
+
+.se-wrapper .carousel-indicators button {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--black-color);
+}
+
+/* Footer CSS */
+
+.footer_wrapper {
+    background-color: var(--white-color);
+    padding-bottom: 0.76rem;
+}
+
+.footer_wrapper .footer-logo img {
+    width: 5rem;
+    height: auto;
+    object-fit: cover;
+}
+
+.footer_wrapper h5 {
+    color: blueviolet;
+    margin-bottom: 0.56rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+.footer_wrapper h5 a {
+    color:blueviolet
+}
+
+.footer_wrapper ul {
+    
+    list-style: none;
+    display: flex;
+    align-items: center;
+    border-radius: 56px;
+}
+
+
+.footer_wrapper ul li {
+    margin-right: 1.8rem;
+    border-radius: 56px;
+}
+
+/* =====================================
+About Page CSS 
+=======================================*/
+
+.about .abilities-wrapper ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about .abilities-wrapper h3 {
+    color: var(--black-color);
+}
+
+.about .abilities-wrapper ul li p {
+    color: var(--black-color)
+}
+
+/* Team CSS */
+.about .team-wrapper .card .team-img {
+    width: 15rem;
+    height: 15rem;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 0.5rem solid var(--primary-color);
+}
+
+.about .team-wrapper .card .team-img img {
+    border-radius: 50%;
+}
+
+.about .team-wrapper .card .team-detail h5 {
+    font-weight: 800;
+    color: var(--black-color);
+    margin-bottom: 0;
+    padding-top: 1.5rem;
+}
+
+.about .team-wrapper .card .team-detail p {
+    color: var(--black-color);
+    margin: 0;
+}
+/* service */
+/* ====================================
+Portfolio Page CSS
+====================================== */
+
+.portfolio-services .card-detail {
+    box-shadow: var(--box-shadow);
+    background-color: var(--black-color);
+    border-radius: 2rem;
+    padding: 3rem;
+    margin-top: -2rem;
+}
+
+.portfolio-services .card-detail h5 {
+    font-weight: 800;
+    font-family: var(--secondary-font);
+}
+
+/* ====================================
+Contact Page CSS
+====================================== */
+
+.contact .get-in-touch .card {
+    background-color: var(--white-color);
+    min-height: 36rem;
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.contact .card i {
+    font-size: 8rem;
+    margin-bottom: 3rem;
+}
+
+.contact .card h4 {
+    font-weight: 800;
+}
+
+.contact .card p {
+    color: var(--black-color);
+}
+
+.contact .card p:last-child {
+    font-family: var(--secondary-font);
+    font-weight: 700;
+}
+
+.form-section {
+    padding: 10rem;
+    background-color: var(--black-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 2rem;
+}
+
+.form-section .form-control:focus {
+    box-shadow: none;
+    border-color: var(--light-color);
+
+}
+
+.form-section input.form-control {
+    height: 4.5rem;
+    border: 0.1rem solid var(--light-color);
+    font-size: 1.5rem;
+}
+
+.form-section textarea {
+    border: 0.1rem solid var(--light-color);
+    font-size: 1.5rem;
+}
