@@ -17,8 +17,6 @@ navBar.forEach(function (a){
         navCollapse.classList.remove("show");
     })
 })
-var name
-
 function validateName() {
     var nameInput = document.getElementById('contact-name');
     var nameError = document.getElementById('name-error');
@@ -41,22 +39,19 @@ function validateName() {
 function validatePhone() {
     var phoneInput = document.getElementById('contact-phone');
     var phoneError = document.getElementById('number-error');
-    var phone = phoneInput.value.trim(); // Get the value of the input and remove whitespace
+    var phone = phoneInput.value.trim(); // Get the value of the input and remove whitespace 
     if (phone.length === 0) {
         phoneError.innerHTML = 'Number is required';
         return false;
     }
-
     if (phone.length !== 10) {
         phoneError.innerHTML = '10 digits required';
         return false;
     }
-
-    if (!phone.match(/^[0-9]{10}$/)) {
+    if (!/^\d+$/.test(phone)) {
         phoneError.innerHTML = 'Only numbers are allowed';
         return false;
     }
-
     phoneError.innerHTML = '<i class="fas fa-check-circle"></i>';
     return true;
 }
@@ -88,19 +83,35 @@ function validateMessage() {
     messageError.innerHTML = '<i class="fas fa-check-circle"></i>';
     return true;
 }
-function validateAdress() {
-    var adressInput = document.getElementById('contact-adress');
-    var adressError = document.getElementById('adress-error');
-    var adress = adressInput.value.trim();
+function validateAddress() {
+    var addressInput = document.getElementById('contact-adress');
+    var addressError = document.getElementById('adress-error');
+    var address = addressInput.value.trim();
 
-    if (adress.length === 0) {
-        adressError.innerHTML = 'More characters are required';
+    if (address.length === 0) {
+        addressError.innerHTML = 'More characters are required';
         return false;
     }
 
-    adressError.innerHTML = '<i class="fas fa-check-circle"></i>';
+    addressError.innerHTML = '<i class="fas fa-check-circle"></i>';
     return true;
 }
+function validateForm() {
+    var isNameValid = validateName();
+    var isPhoneValid = validatePhone();
+    var isEmailValid = validateEmail();
+    var isMessageValid = validateMessage();
+    var isAddressValid = validateAddress();
+
+    // Check if all validations are checked
+    if (isNameValid && isPhoneValid && isEmailValid && isMessageValid && isAddressValid) {
+      alert('Form submitted successfully!');
+      return true;
+    } else {
+      alert('Please fix the errors in the form before submitting.');
+      return false;
+    }
+  }
 
 
 
