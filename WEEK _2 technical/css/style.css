@@ -1,0 +1,654 @@
+      /* TABLE OF CONTENTS */
+/* ------------------
+1. General
+2. Navbar
+3. Banner
+4. About
+5. Services
+6. Portfolio
+7. Blog
+8. Contact
+9. Footer
+-------------------- */
+
+/* 1 General */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* variables for changing background color  */
+:root {
+    /* Background Color */
+    --primary-color: #4458dc;
+    --secondary-color: #854fee;
+    --bg-white: #fff;
+    --bg-light: #faf8ff;
+    --bg-black: #000;
+    --bg-gray: #eee;
+    --gradient: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
+
+    /* Text Color */
+    --primary-text: #4458dc;
+    --secondary-text: #854fee;
+    --text-white: #fff;
+    --text-black: #000;
+    --text-gray: #777;
+
+    /* Font Family */
+    --primary-font: 'Rubik', sans-serif;
+    --secondary-font: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--secondary-font);
+    width: 100%;
+    background-image: url('../images/body-bg.png.webp');
+    background-repeat: no-repeat;
+}
+/* for all a tag */
+a {
+    text-decoration: none;
+    /* disabled underline */
+}
+
+/* 1 Custom CSS */
+
+::-webkit-scrollbar {
+    width: 0.65rem;
+    /* my scrollbar with width */
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-gray);
+    /* scrollbar bg */
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    /* bar color */
+}
+
+section {
+    padding: 5rem 0;
+    /* padding from top and bottom */
+}
+/* a line */
+.line{
+    height: 2px;
+    width: 300px;
+    background-color:blue;
+    margin-top: 5px;
+    opacity: 0.5;
+}
+.lines{
+    height: 2px;
+    width: 300px;
+    background-color:black;
+    margin-top: 2px;
+    opacity: 0.5;
+    margin-right: 100px;
+}
+/* button  common classes */
+.main-btn {
+    display: inline-block;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 2.875rem;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.625rem 1.875rem rgb(118 85 225 / 30%);
+    border: double 0.125rem transparent;
+    padding: 0 2.0625rem;
+    transition: all .4s ease-in-out;
+    --webkit-transition: all .4s ease-in-out;
+    /* webkit transistion for browsers */
+}
+.primary-btn {
+    background-image: var(--gradient);
+    color: var(--text-white);
+}
+/* hover effect for buttons */
+.primary-btn:hover {
+    border-color: var(--secondary-color);
+    background: var(--bg-white);
+    color: var(--secondary-text);
+    box-shadow: var(--secondary-color);
+}
+
+.secondary-btn {
+    background-image: var(--bg-white);
+    color: var(--secondary-text);
+    border-color: var(--secondary-color);
+}
+
+.secondary-btn:hover {
+    background: var(--gradient);
+    color: var(--text-white);
+    box-shadow: none;
+
+}
+h1 {
+    font-size: 4.375rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 1.25rem;
+    font-family: var(--primary-font);
+}
+
+h2 {
+    font-weight: 500;
+    font-size: 2.5rem;
+    line-height: 2.4375rem;
+    margin-bottom: 0.5625rem;
+    color: var(--secondary-color);
+    font-family: var(--primary-font);
+}
+/* animation for the text */
+.data-text{
+    position: relative;
+    font-size: 1.5rem;
+    color: transparent;
+    line-height: 2.75rem;
+    margin-bottom: 0.05rem;
+    font-family: var(--primary-font);
+    -webkit-text-stroke: 0.8px blueviolet;
+    background: url(../back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation:back 40s linear infinite
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+.data-text2{
+    position: relative;
+    font-size: 1.3rem;
+    color: transparent;
+    line-height: 2.75rem;
+    margin-bottom: 0.15rem;
+    font-family: var(--primary-font);
+    -webkit-text-stroke: 0.10px black;
+    background: url(../back.png);
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation:back 40s linear infinite
+}
+@keyframes back{
+    100%{
+        background-position: 4000px 0;
+    }
+}
+/* animation for the text end */
+h4 {
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 3.125rem;
+    margin-bottom: 0.9375rem;
+    color: var(--text-black);
+    font-family: var(--primary-font);
+    text-transform: uppercase;
+    width: 100%;
+    white-space:nowrap;
+    overflow: hidden;
+    animation: typing 2s steps(18);
+}
+
+h5 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 2.1875rem;
+    color: var(--primary-color);
+}
+p {
+    color: var(--text-gray);
+    font-size: 0.9375rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+}
+/* 2 Navbar */
+.header_wrapper .navbar {
+    padding: 0.4375rem 0;
+    -webkit-transition: all .2s linear;
+    -o-transition: all .2s linear;
+    transition: all .2s linear;
+}
+/* my logo in nav bar */
+.navbar-brand img{
+    margin-top: 1px;
+    height: 25px;
+    width: 25px;
+    border-radius: 60px;
+    background-color: rgb(79, 75, 75);
+
+}
+/* my image */
+.top-right-myimg img{
+    margin-top: 1px;
+    height: 55px;
+    width: 55px;
+    border-radius: 60px; 
+
+    
+}
+/* my profile box */
+.containers {
+    display: flex;
+    gap: 12px;
+    max-width: 90px;
+    height: 80px;
+    width: 100%;
+    background: blueviolet;
+    border-radius: 8px;
+    padding: 6px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+.container .card {
+    display: flex;
+    flex: 0 0 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+.container .card:hover{
+    background-color:blue;
+}
+
+/* profile card end */
+/* responsive logo */
+.header_wrapper .navbar-brand img {
+    max-width: 10rem;
+    height: auto;
+}
+/* to remove menu bar outline */
+.header_wrapper .navbar-toggler:focus {
+    box-shadow: none;
+}
+/* space between nav bar */
+.header_wrapper .nav-item {
+    margin: 0 0.625rem;
+}
+
+.header_wrapper .nav-item .nav-link {
+    font-family: var(--primary-font);
+    font-size: 0.9375rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--text-black);
+    display: inline-block;
+}
+/* active and hover  */
+.header_wrapper .nav-item .nav-link.active,
+.header_wrapper .nav-item .nav-link:hover {
+    color: var(--primary-text);
+}
+
+.header-scrolled {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--bg-white);
+    -webkit-box-shadow: 0 0.25rem 0.375rem 0 rgba(12, 0, 46, .05);
+    box-shadow: 0 0.25rem 0.375rem 0 rgba(12, 0, 46, .05);
+    height: auto;
+}
+.header_wrapper .navbar-collapse{
+    margin-top: -0.125rem;
+
+}
+.header_wrapper.menu-navbar-nav{
+    text-align: center;
+    background-color: var(--bg-white);
+}
+.header_wrapper .nav-item .nav-link{
+    margin-top: 0.937rem;
+    margin-bottom:0.752rem;
+}
+
+/* 3 Banner */
+.banner_wrapper {
+    padding-top: 6.875rem;
+    z-index: 1;
+    background-image: url('../vecteezy_human-work-office-illustration-creative-design_11006584.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+}
+/* only i am donex aligned to center not the images */
+.banner_wrapper .col-lg-7 {
+    vertical-align: middle;
+    align-self: center;
+}
+/* line after hello */
+.banner_wrapper .banner-content h2::after {
+    content: '';
+    width: 84%;
+    height: 0.175rem;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    background: var(--bg-black);
+    overflow-x: hidden;
+}
+
+/* 4 About my languages */
+.about_wrapper .single-logo-item {
+    width: 100%;
+    padding-top: 20px;
+    height: 4.875rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 0.0625rem solid var(--bg-gray);
+    box-shadow: blueviolet;
+    
+}
+
+.about_wrapper .single-logo-item:hover {
+    border: 0.9625rem solid transparent;
+    box-shadow: 0 0.5rem 1.175rem rebeccapurple;
+}
+/* my details section */
+.about_wrapper .client-info {
+    padding: 1.5625rem 1.875rem;
+    background: var(--bg-light);
+    position: relative;
+    margin-top: 1.5625rem;
+}
+/* a background image */
+.about_wrapper .client-info:before {
+    content: '';
+    position: absolute;
+    top: -1.5625rem;
+    left: -3.4375rem;
+    background: url('../images/client-info.webp');
+    background-repeat: no-repeat;
+    height: 10.9375rem;
+    width: 10.9375rem;
+}
+/* call icon and text */
+.client-info .large {
+    color: var(--secondary-text);
+    font-family: var(--primary-font);
+    font-size: 6.25rem;
+    font-weight: 700;
+    position: relative;
+    z-index: 9;
+}
+
+.client-info .smll {
+    text-align: left;
+    color: var(--text-black);
+    font-family: var(--primary-font);
+    font-size: 1.25rem;
+    margin-left: 1.25rem;
+    font-weight: 500;
+}
+
+.call-now span {
+    font-size: 3.75rem;
+    font-weight: 700;
+    color: #000;
+}
+
+.call-now p {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-bottom: 0.3125rem;
+}
+
+/* 5 Services */
+.services_wrapper .card {
+    background-color: var(--bg-light);
+    cursor: pointer;
+}
+
+.services_wrapper .card:hover {
+    box-shadow: 0 1.2375rem 1.875rem rgba(65, 76, 220, 0.3);
+    background: var(--bg-white);
+}
+
+/* 6 portfolio */
+.allwebsite .nav-link {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    margin-right: 0.25rem;
+    color: var(--text-black);
+    text-transform: uppercase;
+}
+/* for active selection */
+.allwebsite .nav-link.active {
+    color: var(--secondary-text);
+    background-color: transparent;
+}
+
+.allwebsite .websites-img {
+    position: relative;
+    cursor: pointer;
+}
+
+.allwebsite .websites-img .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all .4s ease 0s;
+    -moz-transition: all .4s ease 0s;
+    -o-transition: all .4s ease 0s;
+    transition: all .4s ease 0s;
+}
+
+.allwebsite .websites-img:hover .overlay {
+    background: rgba(77, 87, 222, .5);
+}
+
+.websites-img .overlay i {
+    font-size: 6.25rem;
+    color: var(--text-white);
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .4s ease 0s;
+    transition: all .4s ease 0s;
+}
+/* img+icon hovering */
+.allwebsite .websites-img:hover i {
+    opacity: 1;
+    visibility: visible;
+    top: 50%;
+    left: 50%;
+}
+
+/* 7 educational*/
+
+.ed .card {
+    position: relative;
+    cursor: pointer;
+    margin-right: 3.287rem;
+}
+.ed .ed_details {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    background: rgba(34, 34, 34, .8);
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+.text-white{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+ .ed_details:hover {
+    background: rgba(68, 88, 220, .85);
+}
+
+.ed .ed_details .border_line {
+    margin: 0.625rem 0;
+    margin-left: 0.54rem;
+    background: var(--bg-white);
+    width: 85%;
+    height: 0.125rem;
+}
+/* 8 contact */
+/* forms */
+.newsletter {
+    width: 100%;
+    height: 100%;
+    background-image: url('../AdobeStock_304335305_Preview.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 4.375rem 0;
+}
+/* form input */
+.newsletter input[type=text],select,textarea,option {
+    width: 100%;
+    line-height: 3rem;
+    padding: 0.2rem 0.5625rem;
+    border: 0.125rem solid var(--secondary-color);
+    background: transparent;
+    font-weight: 400;
+    border-radius: 0.53125rem;
+    color: var(--bg-black);
+    margin-top: 5px;
+    resize: vertical;
+    margin-bottom: 6px;
+}
+/* input inside input grup i made */
+.input-group{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    position: relative;
+    border-radius: 25px;
+}
+.input-group label{
+    flex-basis: 28%;
+}
+.input-group span{
+    position:absolute;
+    bottom: 20px;
+    right: 17px;
+    font-size: 14px;
+    color: red;
+}
+.input-group span i{
+    color: green;
+}
+/* what happen get focused */
+.newsletter input:focus {
+    color: var(--secondary-text);
+    background-color: transparent;
+    border-color: var(--bg-white);
+    outline: 0;
+    box-shadow: var(--secondary-color);
+}
+.newsletter textarea:focus {
+    color: var(--secondary-text);
+    background-color: transparent;
+    border-color: var(--bg-white);
+    outline: 0;
+    box-shadow: var(--secondary-color);
+}
+input[type=submit] {
+    display: inline-block;
+    font-family: var(--primary-font);
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 2.875rem;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 0.3125rem;
+    box-shadow: 0 0.625rem 1.875rem rgb(118 85 225 / 30%);
+    border: double 0.125rem transparent;
+    padding: 0 2.0625rem;
+    transition: all .4s ease-in-out;
+    --webkit-transition: all .4s ease-in-out;
+  }
+.submit:hover{
+    border-color: var(--secondary-color);
+    background: var(--bg-white);
+    color: var(--secondary-text);
+    box-shadow: var(--secondary-color);
+}
+.newsletter textarea:focus {
+    color: var(--secondary-text);
+    background-color: transparent;
+    border-color: var(--bg-white);
+    outline: 0;
+    box-shadow: var(--secondary-color);
+}
+.newsletter input::placeholder {
+    color: blue;
+}
+.newsletter textarea::placeholder {
+    color: blue;
+}
+
+/* footer */
+.footer_wrapper .footer-logo img {
+    max-width: 8.5rem;
+    height: auto;
+}
+
+.footer_wrapper .social-icon li {
+    margin: 0.375rem;
+}
+
+.footer_wrapper .social-icons a {
+    line-height: 1.875rem;
+    font-size: 1.5625rem;
+    display: inline-block;
+    color: var(--text-black);
+    text-align: center;
+    margin: 0 0.625rem;
+}
+label{
+    width: 100%;
+    margin-top: 0.58rem;
+    padding: 6px 0;
+    font-family:var(--primary-font);
+}
+.footer_wrapper .social-icons a:hover {
+    color: var(--primary-color);
+}
+
+.footer_wrapper .copyright-text p {
+    font-size: 0.6875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+}
+
+.footer_wrapper .footer-text a {
+    color: var(--primary-color);
+}
+
+
+    
+      
